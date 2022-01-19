@@ -642,6 +642,9 @@ nav {
 }
 
 .submit-button {
+  display: flex;
+  align-items: center;
+  text-align: center;
   width: 200px;
   height: 50px;
   background: var(--accent-color);
@@ -651,18 +654,14 @@ nav {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  letter-spacing: 0.06em;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  letter-spacing: 0.06 em;
   color: var(--primary-white-color);
   cursor: pointer;
   padding-left: 29px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-left: 12px;
-  transition: background-color, var(--primary-white-color),
-    var(--animation-duration) var(--timing-function);
+  transition: background-color var(--animation-duration) var(--timing-function);
 }
 
 .submit-button:hover,
@@ -734,7 +733,7 @@ nav {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50px;
   box-sizing: border-box;
-  transition: transform, var(--animation-duration) var(--timing-function);
+  transition: color, var(--animation-duration) var(--timing-function);
 }
 
 .close-modal-icon {
@@ -745,7 +744,12 @@ nav {
   transition: transform, var(--animation-duration) var(--timing-function);
 }
 
-/* MODAL */
+.close-modal:hover > .close-modal-icon,
+.close-modal:focus > .close-modal-icon {
+  fill: var(--accent-color);
+}
+
+/* MODAL-content */
 
 .modal-form {
   display: flex;
@@ -790,6 +794,18 @@ nav {
   border: 1px solid rgba(33, 33, 33, 0.2);
   box-sizing: border-box;
   border-radius: 4px;
+  padding-left: 40px;
+  outline-color: var(--accent-color);
+  transition: border-color var(--animation-duration) var(--timing-function);
+}
+
+.modal-form-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-form-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
+  border-color: transparent;
 }
 
 .input-field {
@@ -801,6 +817,7 @@ nav {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill var(--animation-duration) var(--timing-function);
 }
 
 .modal-form-comment {
@@ -816,54 +833,74 @@ nav {
 }
 
 .modal-chek {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
-.native-chek {
-  position: relative;
+.chek-input {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  background: var(--title-text-color);
 }
 
 .chek-icon {
-  position: absolute;
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 12px;
+  margin-right: 8px;
+  border-radius: 2px;
 }
 
-.chek-link {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  text-decoration-line: underline;
-  color: var(--accent-color);
-}
-
-.modal-chek:checked + .chek-icon {
-  background-image: url(../images/icons.svg#icon-icon-check-1);
+.chek-input:checked + .chek-icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon-check-11.svg);
   background-size: contain;
   background-origin: border-box;
   border-color: var(--accent-color);
 }
 
+.modal-chek:focus {
+  border-color: var(--accent-color);
+}
+
+.chek-link {
+  margin-left: 5px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+  color: var(--accent-color);
+  transform: color var(--animation-duration) var(--timing-function);
+}
+
 .modal-button {
-  display: flex;
-  align-items: center;
-  text-align: center;
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
   width: 200px;
   height: 50px;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border-color: transparent;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--primary-white-color);
-  padding: 0;
+  cursor: pointer;
+  margin-top: 30px;
+  transition: background-color var(--animation-duration) var(--timing-function);
 }
 
 /* ПОРТФОЛИО */
