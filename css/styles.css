@@ -852,6 +852,10 @@ nav {
   background: var(--title-text-color);
 }
 
+.chek-input:focus {
+  border-color: var(--accent-color);
+}
+
 .chek-icon {
   display: flex;
   align-items: center;
@@ -859,13 +863,22 @@ nav {
   margin-left: 12px;
   margin-right: 8px;
   border-radius: 2px;
+  outline: none;
+  border: 1px solid black;
+  width: 16px;
+  height: 15px;
+  transition: background-color var(--animation-duration) var(--timing-function);
 }
 
 .chek-input:checked + .chek-icon {
   background-color: var(--accent-color);
   background-image: url(../images/icon-check-11.svg);
-  background-size: contain;
+  background-size: cover;
   background-origin: border-box;
+  border-color: var(--accent-color);
+}
+
+.chek-input:checked ~ .custom-chek-icon {
   border-color: var(--accent-color);
 }
 
