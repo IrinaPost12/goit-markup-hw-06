@@ -490,7 +490,10 @@ nav {
 .footer-container {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+}
+
+.footer-logo-container {
+  flex-grow: 1;
 }
 
 .footer-social-networks-list {
@@ -634,11 +637,11 @@ nav {
   transition: color var(--primary-white-color), var(--animation-duration) var(--timing-function);
 }
 
-::placeholder {
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+.modal-form-comment::placeholder {
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .submit-button {
@@ -675,8 +678,6 @@ nav {
 }
 
 .submit-icon {
-  display: flex;
-  justify-content: baseline;
   margin-left: 10px;
 }
 
@@ -769,7 +770,7 @@ nav {
 }
 
 .modal-form-field:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .modal-form-label {
@@ -821,7 +822,7 @@ nav {
 }
 
 .modal-form-comment {
-  display: inline-block;
+  display: block;
   height: 120px;
   padding: 12px 16px;
   margin: 0;
@@ -829,7 +830,7 @@ nav {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
-  color: rgba(117, 117, 117, 0.5);
+  color: black;
 }
 
 .modal-chek {
@@ -860,11 +861,10 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 12px;
   margin-right: 8px;
   border-radius: 2px;
   outline: none;
-  border: 1px solid black;
+  border: 2px solid black;
   width: 16px;
   height: 15px;
   transition: background-color var(--animation-duration) var(--timing-function);

@@ -331,7 +331,7 @@
 
     <footer class="section footer-section">
         <div class="footer-container container">
-            <div>
+            <div class="footer-logo-container">
                 <a class="footer-logo" href="/"><span class="accent-color">Web</span>Studio</a>
                 <address>
                     <ul class="footer">
@@ -376,21 +376,17 @@
                     </li>
                 </ul>
             </div>
-            <div>
-                <form class="appeal">
-                    <label class="appeal-title" for="label-appeal">Подпишитесь на рассылку</label>
-                    <div class="appeal-input-button">
-                        <input class="appeal-input" type="email" name="email" id="label-appeal" placeholder="E-mail" />
-                        <button class="submit-button" type="submit">Подписаться
-                        <div class="submit-icon">
-                            <svg width=24 height=24>
-                                <use href="./images/icons.svg#icon-send-1"></use>
-                            </svg>
-                        </div>
-                        </button>
-                    </div>
-                </form>
-            </div>
+            <form class="appeal">
+                <label class="appeal-title" for="label-appeal">Подпишитесь на рассылку</label>
+                <div class="appeal-input-button">
+                    <input class="appeal-input" type="email" name="email" id="label-appeal" placeholder="E-mail" />
+                    <button class="submit-button" type="submit">Подписаться
+                    <svg class="submit-icon" width=24 height=24>
+                        <use href="./images/icons.svg#icon-send-1"></use>
+                    </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
@@ -401,7 +397,7 @@
                 </svg>
             </button>
             <form class="modal-form">
-                <h4 class="modal-form-title">Оставьте свои данные, мы вам перезвоним</h4>
+                <p class="modal-form-title">Оставьте свои данные, мы вам перезвоним</p>
                 <div class="modal-form-field">
                     <label class="modal-form-label" for="name">Имя</label>
                     <span class="input-field">
@@ -431,7 +427,7 @@
                 </div>
                 <div class="modal-form-field">
                     <label class="modal-form-label" for="modal-comment">Комментарий</label>
-                    <textarea class="modal-form-comment" type="textarea" name="comment" id="modal-comment" rows="9" placeholder="Введите текст" autocomplete="off"></textarea>
+                    <textarea class="modal-form-comment" type="textarea" name="comment" id="modal-comment" rows="9" placeholder="Введите текст"></textarea>
                 </div>
                 <div class="agreement-chek">
                     <label class="modal-chek">
